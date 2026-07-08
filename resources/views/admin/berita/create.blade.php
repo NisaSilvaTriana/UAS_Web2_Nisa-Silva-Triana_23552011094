@@ -30,8 +30,12 @@
     <label>Penulis</label>
 
     <input type="text"
+           class="form-control"
+           value="{{ optional(auth()->user())->name ?? optional(auth()->user())->email ?? 'Admin' }}"
+           disabled>
+    <input type="hidden"
            name="penulis"
-           class="form-control">
+           value="{{ optional(auth()->user())->name ?? optional(auth()->user())->email ?? 'Admin' }}">
 </div>
 
 <div class="mb-3">

@@ -41,7 +41,6 @@ public function index(Request $request)
         $request->validate([
             'judul'=>'required',
             'isi'=>'required',
-            'penulis'=>'required',
             'status'=>'required',
             'gambar'=>'nullable|image'
         ]);
@@ -57,7 +56,7 @@ public function index(Request $request)
             'judul'=>$request->judul,
             'isi'=>$request->isi,
             'gambar'=>$gambar,
-            'penulis'=>$request->penulis,
+            'penulis'=>optional(auth()->user())->name ?? optional(auth()->user())->email ?? 'Admin',
             'status'=>$request->status,
         ]);
 
@@ -75,7 +74,6 @@ public function index(Request $request)
     $request->validate([
         'judul' => 'required',
         'isi' => 'required',
-        'penulis' => 'required',
         'status' => 'required',
         'gambar' => 'nullable|image'
     ]);
@@ -87,7 +85,6 @@ public function index(Request $request)
 
     $berita->judul = $request->judul;
     $berita->isi = $request->isi;
-    $berita->penulis = $request->penulis;
     $berita->status = $request->status;
 
     $berita->save();

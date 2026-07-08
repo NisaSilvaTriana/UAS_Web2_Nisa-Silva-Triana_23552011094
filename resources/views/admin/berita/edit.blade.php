@@ -30,9 +30,9 @@
 <div class="mb-3">
     <label>Penulis</label>
     <input type="text"
-           name="penulis"
            class="form-control"
-           value="{{ $berita->penulis }}">
+           value="{{ $berita->penulis }}"
+           disabled>
 </div>
 
 <div class="mb-3">
