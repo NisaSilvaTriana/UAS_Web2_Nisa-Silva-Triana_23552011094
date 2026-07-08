@@ -67,7 +67,6 @@
 
             </div>
 
-            <!-- MODAL -->
             <div class="modal fade" id="galeri{{ $galeri->id }}" tabindex="-1">
 
                 <div class="modal-dialog modal-lg">
@@ -110,7 +109,7 @@
 
         </div>
 
-        <!-- PAGINATION -->
+
         <div class="mt-4 d-flex justify-content-center">
             {{ $galeris->links() }}
         </div>

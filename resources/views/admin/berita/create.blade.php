@@ -33,9 +33,6 @@
            class="form-control"
            value="{{ optional(auth()->user())->name ?? optional(auth()->user())->email ?? 'Admin' }}"
            disabled>
-    <input type="hidden"
-           name="penulis"
-           value="{{ optional(auth()->user())->name ?? optional(auth()->user())->email ?? 'Admin' }}">
 </div>
 
 <div class="mb-3">

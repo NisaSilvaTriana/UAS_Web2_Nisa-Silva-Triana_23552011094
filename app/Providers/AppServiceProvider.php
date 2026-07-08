@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Kontak;
@@ -15,6 +16,10 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        RedirectIfAuthenticated::redirectUsing(function () {
+            return route('admin.dashboard');
+        });
+
         View::composer('*', function ($view) {
             $view->with('kontakFooter', Kontak::first());
         });

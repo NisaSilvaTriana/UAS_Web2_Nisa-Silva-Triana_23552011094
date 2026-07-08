@@ -119,7 +119,6 @@ Baca Selengkapnya
 
 </div>
 
-<!-- MODAL -->
 
 <div
 class="modal fade"
@@ -186,7 +185,6 @@ Belum ada berita yang dipublikasikan.
 
 </div>
 
-<!-- PAGINATION -->
 
 <div class="mt-5 d-flex justify-content-center">
 

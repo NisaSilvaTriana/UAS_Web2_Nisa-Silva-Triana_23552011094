@@ -2,7 +2,6 @@
 
 @section('content')
 
-<!-- HERO -->
 <section class="hero hero-page">
 
     <div class="overlay"></div>
@@ -30,7 +29,6 @@
 
                 <div class="row align-items-center">
 
-                    <!-- Tanggal -->
                     <div class="col-md-2 text-center border-end">
 
                         <h2 class="fw-bold text-primary mb-0">
@@ -43,7 +41,6 @@
 
                     </div>
 
-                    <!-- Isi -->
                     <div class="col-md-10">
 
                         <h4 class="agenda-title">

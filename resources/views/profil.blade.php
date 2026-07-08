@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- Hero -->
+
 <section class="hero hero-page">
     <div class="overlay"></div>
 

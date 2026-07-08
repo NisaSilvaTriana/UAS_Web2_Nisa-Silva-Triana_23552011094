@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <!-- Mobile -->
+    
     <div class="md:hidden border-t">
 
         <div class="px-4 py-3 space-y-2">

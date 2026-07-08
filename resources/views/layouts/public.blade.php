@@ -16,7 +16,6 @@
     <!-- CSS Laravel -->
     @vite(['resources/css/app.css','resources/js/app.js'])
 
-    <!-- Inline overrides to ensure site background and navbar z-index apply -->
     <style>
         :root { --bs-body-bg: #f5f6fb; }
         body { background-color: #f5f6fb !important; }

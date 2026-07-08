@@ -70,7 +70,7 @@
 
     </div>
 
-    <!-- CONTENT -->
+    
     <div class="row g-4 mt-4">
 
         <!-- BERITA TERBARU -->
