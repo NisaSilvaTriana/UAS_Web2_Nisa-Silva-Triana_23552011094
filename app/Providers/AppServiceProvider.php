@@ -20,8 +20,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Memaksa HTTPS otomatis ketika aplikasi berjalan di lingkungan online/production
-        if ($this->app->environment('production')) {
+        // Paksa HTTPS jika berjalan di Railway atau environment online
+        if (
+            $this->app->environment('production') || 
+            (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+        ) {
             URL::forceScheme('https');
         }
     }
