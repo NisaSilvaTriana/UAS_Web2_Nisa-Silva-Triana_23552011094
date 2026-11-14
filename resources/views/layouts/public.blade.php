@@ -7,14 +7,14 @@
 
     <title>SDN Kulinyar</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- CSS Laravel -->
-    @vite(['resources/css/app.css','resources/js/app.js'])
+    <!-- Fallback / Custom CSS konvensional jika ada -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
         :root { --bs-body-bg: #f5f6fb; }
@@ -22,7 +22,6 @@
         .navbar { position: relative; z-index: 2000; }
         .hero::before { z-index: 0; }
     </style>
-
 </head>
 
 <body>
@@ -33,6 +32,7 @@
 
     @include('layouts.footer')
 
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
