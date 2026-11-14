@@ -1,0 +1,629 @@
+/*==================================
+    GOOGLE FONT
+==================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Tailwind directives - enable Tailwind utilities/components/base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f5f6fb;
+    font-family:'Poppins',sans-serif;
+}
+
+/*==================================
+    CONTAINER
+==================================*/
+
+.container{
+    max-width:1250px;
+}
+
+/*==================================
+    NAVBAR
+==================================*/
+
+.navbar{
+    background:#4338ca;
+    padding:14px 0;
+    position: relative;
+    z-index: 2000;
+}
+
+.navbar .container{
+    max-width:1250px;
+    width: 100%;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:1rem !important;
+    flex-wrap:nowrap !important;
+}
+
+.navbar-brand{
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+    display:flex !important;
+    align-items:center !important;
+    gap:.5rem !important;
+    flex:0 0 auto !important;
+    white-space:nowrap !important;
+}
+
+.navbar-brand img{
+    width:45px;
+    display:inline-block;
+}
+
+.navbar-toggler{ border:0; }
+
+.navbar-collapse{
+    display:flex !important;
+    justify-content:flex-end !important;
+    align-items:center !important;
+    flex:1 1 auto !important;
+    min-width:0 !important;
+    position:relative !important;
+}
+
+.navbar-nav{
+    display:flex !important;
+    gap:1.5rem !important;
+    margin:0 !important;
+    padding:0 !important;
+    list-style:none !important;
+    margin-left:auto !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    flex-wrap:nowrap !important;
+}
+
+.nav-item{
+    display:flex !important;
+    flex:0 0 auto !important;
+}
+
+.nav-link{
+    color:#fff;
+    font-weight:600;
+    padding:.35rem .5rem;
+    display:inline-flex;
+    white-space:nowrap !important;
+}
+
+.nav-link:hover{ color:#ffd84d; text-decoration:none; }
+
+@media (max-width:991px){
+    .navbar-collapse{ display:block !important; }
+    .navbar-nav{ flex-direction:column; gap:.5rem; }
+}
+
+/* Force navbar to stay visible and prevent content overlap */
+.navbar{
+    position:sticky !important;
+    top:0 !important;
+    width:100% !important;
+    background:#4338ca !important;
+    z-index:3000 !important;
+}
+
+.navbar .container{
+    width:100% !important;
+    flex-wrap:nowrap !important;
+}
+
+.navbar-collapse{
+    display:flex !important;
+    justify-content:flex-end !important;
+    align-items:center !important;
+}
+
+.navbar-nav{
+    flex-wrap:nowrap !important;
+    margin-left:auto !important;
+}
+
+.navbar-toggler{
+    display:none !important;
+}
+
+/*==================================
+    HERO
+==================================*/
+
+.hero{
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay */
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(67,56,202,.45);
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* ===========================
+   BERANDA
+=========================== */
+
+.hero-home h1{
+    font-size:52px;
+    font-weight:700;
+    line-height:1.3;
+    color:#fff;
+    text-shadow:0 6px 20px rgba(0,0,0,.45);
+}
+
+.hero-home p{
+    margin-top:15px;
+    font-size:20px;
+    color:#fff;
+}
+
+/* ===========================
+   HALAMAN LAIN
+=========================== */
+
+.hero-page h1{
+    font-size:52px;
+    font-weight:700;
+    line-height:1.3;
+    color:#2563eb;
+    text-shadow:0 6px 20px rgba(37,99,235,.30);
+}
+
+.hero-page p{
+    margin-top:15px;
+    font-size:20px;
+    color:#3b82f6;
+}
+/*==================================
+    STATISTIK
+==================================*/
+
+.statistik{
+    margin-top:-35px;
+    position:relative;
+    z-index:99;
+}
+
+.stat-box{
+    background:#4338ca;
+    color:#fff;
+    border-radius:15px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-5px);
+}
+
+.stat-box span{
+    font-size:15px;
+}
+
+.stat-box h3{
+    font-size:34px;
+    font-weight:700;
+    margin-top:5px;
+}
+
+/*==================================
+    CONTENT BOX
+==================================*/
+
+.content-box{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    min-height:350px;
+}
+
+/*==================================
+    JUDUL
+==================================*/
+
+.judul-section{
+    color:#4338ca;
+    font-size:30px;
+    font-weight:700;
+    border-left:5px solid orange;
+    padding-left:10px;
+    margin-bottom:20px;
+}
+
+/*==================================
+    TABLE
+==================================*/
+
+.table td{
+    padding:15px 8px;
+    border-bottom:1px solid #ececec;
+}
+
+.table a{
+    color:#4338ca;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.table a:hover{
+    text-decoration:underline;
+}
+
+/*==================================
+    BERITA
+==================================*/
+
+.news-card{
+    display:flex;
+    gap:15px;
+    border:1px solid #e7e7e7;
+    border-radius:12px;
+    padding:12px;
+    margin-bottom:18px;
+    transition:.3s;
+    background:#fff;
+}
+
+.news-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.news-card img{
+    width:140px;
+    height:95px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.news-body{
+    flex:1;
+}
+
+.news-body h5{
+    color:#4338ca;
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.news-body small{
+    color:#888;
+}
+
+/* Override Bootstrap body background variable to match site background */
+:root{
+    --bs-body-bg: #f5f6fb;
+}
+
+/* Ensure hero overlay doesn't cover navbar */
+.hero::before{
+    z-index: 0;
+}
+
+
+.news-body .btn{
+    background:#4338ca;
+    border:none;
+}
+
+.news-body .btn:hover{
+    background:#2d24b8;
+}
+
+/*==================================
+    GALERI
+==================================*/
+
+.gallery{
+    margin-top:50px;
+}
+
+.gallery img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/*==================================
+    GALERI
+==================================*/
+
+.gallery{
+    margin-top:50px;
+}
+
+.gallery-img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.gallery-img:hover{
+    transform:scale(1.05);
+}
+
+.galeri-card .btn{
+    background:#4338ca;
+    border:none;
+    color:#fff;
+}
+
+.galeri-card .btn:hover{
+    background:#2d24b8;
+    color:#fff;
+}
+/*==================================
+    FOOTER
+==================================*/
+
+footer{
+    background:#4338ca;
+    color:#fff;
+    padding:30px 0;
+    margin-top:60px;
+}
+
+footer h5{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+footer p{
+    margin-bottom:8px;
+}
+
+footer a{
+    color:#fff;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#ffd84d;
+}
+
+/*==================================
+    RESPONSIVE
+==================================*/
+
+@media(max-width:992px){
+
+.hero{
+    height:260px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.news-card{
+    flex-direction:column;
+}
+
+.news-card img{
+    width:100%;
+    height:200px;
+}
+
+.statistik{
+    margin-top:20px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+    height:220px;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.judul-section{
+    font-size:24px;
+}
+
+.content-box{
+    margin-bottom:20px;
+}
+}
+/*==================================
+    HERO PAGE
+==================================*/
+
+.hero-page{
+    height:250px;
+}
+
+.hero-page h1{
+    color:#fff;
+    font-size:48px;
+    font-weight:700;
+}
+
+.hero-page p{
+    color:#fff;
+    font-size:20px;
+    margin-top:10px;
+}
+
+/*==================================
+    PROFIL
+==================================*/
+
+.content-box{
+    background:#fff;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.content-box p{
+    line-height:1.9;
+    color:#555;
+    text-align:justify;
+}
+/*==================================
+    FOOTER
+==================================*/
+
+.footer{
+    background:#4338ca;
+    color:#fff;
+    padding:60px 0 20px;
+    margin-top:80px;
+}
+
+.footer h4{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+.footer hr{
+    border-color:rgba(255,255,255,.2);
+    margin:25px 0;
+}
+
+.footer-menu{
+    list-style:none;
+    padding:0;
+}
+
+.footer-menu li{
+    margin-bottom:10px;
+}
+
+.footer-menu a{
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-menu a:hover{
+    color:#FFD54F;
+    padding-left:5px;
+}
+
+.footer i{
+    color:#FFD54F;
+    margin-right:8px;
+}
+
+.footer .text-center{
+    color:#ddd;
+    font-size:14px;
+}
+/*==================================
+    PENGUMUMAN
+==================================*/
+
+.pengumuman-card{
+    border-radius:15px;
+    transition:.3s;
+}
+
+.pengumuman-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.pengumuman-title{
+    color:#4338ca;
+    font-weight:700;
+}
+
+.pengumuman-card .btn{
+    background:#4338ca;
+    border:none;
+    color:#fff;
+    border-radius:8px;
+}
+
+.pengumuman-card .btn:hover{
+    background:#2d24b8;
+    color:#fff;
+}
+/*==================================
+    AGENDA
+==================================*/
+
+.agenda-card{
+    border-radius:15px;
+    transition:.3s;
+}
+
+.agenda-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.agenda-title{
+    color:#4338ca;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+/*==================================
+    KONTAK
+==================================*/
+
+.kontak-title{
+    color:#4338ca;
+    font-weight:700;
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.kontak-title i{
+    color:#4338ca;
+    margin-right:8px;
+}
