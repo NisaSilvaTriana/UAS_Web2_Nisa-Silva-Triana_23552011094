@@ -7,7 +7,7 @@ style="background: linear-gradient(rgba(67,56,202,.45),rgba(67,56,202,.45)), url
     <div class="container hero-content">
         <h1>
             Selamat Datang di<br>
-            Sistem Informasi Publikasi
+            MEDIA INFORMASI TERPADU 
         </h1>
         <p>SDN Kulinyar</p>
     </div>

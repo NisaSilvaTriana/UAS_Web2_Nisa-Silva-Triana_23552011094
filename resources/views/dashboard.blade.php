@@ -8,7 +8,7 @@
     </h2>
 
     <p class="text-muted">
-        Selamat Datang di Sistem Informasi Publikasi SDN Kulinyar
+        Selamat Datang di MEDIA INFORMASI TERPADU SDN Kulinyar
     </p>
 
     <!-- STATISTIK CARD -->
