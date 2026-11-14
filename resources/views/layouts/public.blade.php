@@ -12,15 +12,8 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- CSS Hasil Build Vite secara Langsung -->
-    <link rel="stylesheet" href="{{ asset('build/assets/app-BMA14Q8T.css') }}">
-
-    <style>
-        :root { --bs-body-bg: #f5f6fb; }
-        body { background-color: #f5f6fb !important; }
-        .navbar { position: relative; z-index: 2000; }
-        .hero::before { z-index: 0; }
-    </style>
+    <!-- CSS Asli Buatan Kamu di public/css/app.css -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body>
@@ -33,9 +26,6 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JS Hasil Build Vite secara Langsung -->
-    <script src="{{ asset('build/assets/app-BfpX1doZ.js') }}"></script>
 
 </body>
 
