@@ -7,14 +7,14 @@
 
     <title>SDN Kulinyar</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Fallback / Custom CSS konvensional jika ada -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- CSS Hasil Build Vite secara Langsung -->
+    <link rel="stylesheet" href="{{ asset('build/assets/app-BMA14Q8T.css') }}">
 
     <style>
         :root { --bs-body-bg: #f5f6fb; }
@@ -34,6 +34,9 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Hasil Build Vite secara Langsung (Opsional jika dibutuhkan) -->
+    <script src="{{ asset('build/assets/app-BfpX1doZ.js') }}"></script>
 
 </body>
 
