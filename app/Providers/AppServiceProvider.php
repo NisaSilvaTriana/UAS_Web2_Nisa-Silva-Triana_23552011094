@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\URL; // <-- Tambahkan baris ini di atas
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
+use App\Models\Kontak; // Pastikan model Kontak sesuai (atau sesuaikan dengan nama model tabel kontaks kamu)
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,9 +22,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Memaksa seluruh asset dan URL menggunakan HTTPS saat di production
+        // Paksa HTTPS jika di production
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
         }
+
+        // Menyediakan variabel $kontakFooter secara otomatis ke semua view / halaman
+        View::composer('*', function ($view) {
+            $view->with('kontakFooter', Kontak::first());
+        });
     }
 }
