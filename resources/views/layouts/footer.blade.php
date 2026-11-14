@@ -41,27 +41,30 @@
 
                 <h4>Kontak</h4>
 
-                @if($kontakFooter)
+                @if(isset($kontakFooter) && $kontakFooter)
 
                     <p>
                         <i class="bi bi-geo-alt-fill me-2"></i>
-                        {{ $kontakFooter->alamat }}
+                        {{ $kontakFooter->alamat ?? 'Alamat belum diatur' }}
                     </p>
 
                     <p>
                         <i class="bi bi-envelope-fill me-2"></i>
-                        {{ $kontakFooter->email }}
+                        {{ $kontakFooter->email ?? 'Email belum diatur' }}
                     </p>
 
                     <p>
                         <i class="bi bi-telephone-fill me-2"></i>
-                        {{ $kontakFooter->telepon }}
+                        {{ $kontakFooter->telepon ?? 'Telepon belum diatur' }}
                     </p>
 
                 @else
 
                     <p class="text-light">
-                        Data kontak belum tersedia.
+                        <i class="bi bi-geo-alt-fill me-2"></i> Sumedang, Jawa Barat
+                    </p>
+                    <p class="text-light">
+                        <i class="bi bi-envelope-fill me-2"></i> info@sdnkulinyar.sch.id
                     </p>
 
                 @endif
