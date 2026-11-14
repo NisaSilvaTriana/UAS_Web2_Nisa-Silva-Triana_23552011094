@@ -11,8 +11,11 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Tailwind CSS Play CDN untuk Production tanpa Node.js -->
+        <!-- Tailwind CSS Play CDN (Aman & Langsung Jalan di Production tanpa build) -->
         <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Jika ada CSS tambahan custom, gunakan secure_asset agar otomatis HTTPS -->
+        <!-- <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}"> -->
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
