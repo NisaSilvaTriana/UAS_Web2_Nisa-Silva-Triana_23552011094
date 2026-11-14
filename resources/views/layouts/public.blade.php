@@ -12,8 +12,8 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- CSS Asli Buatan Kamu di public/css/app.css -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- CSS Asli Buatan Kamu dengan secure_asset agar otomatis HTTPS -->
+    <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
 </head>
 
 <body>
